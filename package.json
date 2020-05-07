@@ -9,7 +9,8 @@
   "keywords": [],
   "author": "alu0101049151 <alu0101049151@ull.edu.es> (https://github.com/alu0101049151)",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
