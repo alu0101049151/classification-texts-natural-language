@@ -21,14 +21,14 @@
  */
 'use strict';
 
-const OUTPUT_FILE = ('vocabulario.txt');
+
 const fs = require('fs');
 
-// Saves in the 'myArgs' array only the two numbers given by command line.
-const myArgs = process.argv.slice(2);
+// // Saves in the 'myArgs' array only the two numbers given by command line.
+// const myArgs = process.argv.slice(2);
 
-// Stores the first value and converts it to number type.
-const inputFile = myArgs[0];
+// // Stores the first value and converts it to number type.
+// const inputFile = myArgs[0];
 
 const NEWLINE = /\r\n|\r|\n/;
 const COMMA = ',';
@@ -36,6 +36,9 @@ const REPLACE = /\W/g;
 const UTF8 = 'utf8';
 const SPACE = ' ';
 const N_LINE = '\n';
+const NUMBER_OR_SPACE = /^(.*)?\d+(.*)?$|^\s*$/;
+const OUTPUT_FILE = 'vocabulario.txt';
+const INPUT_FILE = 'cebo_train.csv';
 
 /**
  * @desc Reads a file from the input name given by commandline.
@@ -72,7 +75,6 @@ function getTokens(array) {
     tokensArray = tokensArray.concat(auxArray);
   }
 
-  const NUMBER_OR_SPACE = /^(.*)?\d+(.*)?$|^\s*$/;
   const finalTokens = [];
   for (const currentToken of tokensArray) {
     if (!NUMBER_OR_SPACE.test(currentToken) &&
@@ -92,4 +94,4 @@ function getTokens(array) {
   stream.close();
 }
 
-fileReader(inputFile);
+fileReader(INPUT_FILE);
