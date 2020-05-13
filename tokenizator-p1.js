@@ -8,7 +8,7 @@
  * Grade: 3rd
  * Project: Classification of Texts in Natural Language.
  * Email: alu0101049151@ull.edu.es
- * @desc: tokenizator.js file: Contains an implementation of a lexical analyzer
+ * @desc: tokenizator-p1.js file: Contains an implementation of a lexical analyzer
  *        that, from an input file with data, generates a dictionary with.
  *
  * References:
@@ -31,12 +31,13 @@ const fs = require('fs');
 // const inputFile = myArgs[0];
 
 const NEWLINE = /\r\n|\r|\n/;
-const COMMA = ',';
 const REPLACE = /\W/g;
+const NUMBER_OR_SPACE = /^(.*)?\d+(.*)?$|^\s*$/;
+
 const UTF8 = 'utf8';
 const SPACE = ' ';
 const N_LINE = '\n';
-const NUMBER_OR_SPACE = /^(.*)?\d+(.*)?$|^\s*$/;
+const COMMA = ',';
 const OUTPUT_FILE = 'vocabulario.txt';
 const INPUT_FILE = 'cebo_train.csv';
 
