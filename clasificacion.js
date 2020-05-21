@@ -6,7 +6,7 @@
  * Escuela Superior de Ingeniería y Tecnología
  * Computer Ingenieering Degree
  * Grade: 3rd
- * Project: Classification of Texts in Natural Language.
+ * Project: Classification of a headline in classes "cebo" or "nocebo"
  * Email: alu0101049151@ull.edu.es
  * @desc: learning-p2.js file: Contains the implementation of a program to
  *                          carry out the estimation of the language model.

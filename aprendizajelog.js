@@ -178,8 +178,8 @@ function learningLog(lines, finalWords, cebosWord, nocebosWord) {
   const ceboTProb = Math.log((cebos / totalLines)).toFixed(4);
   const noceboTProb = Math.log((nocebos / totalLines)).toFixed(4);
 
-  const endCebo = Math.log((cebos + 1) / (cebos + totalLines)).toFixed(4);
-  const endNocebo = Math.log((nocebos + 1) / (nocebos + totalLines)).toFixed(4);
+  // const endCebo = Math.log((cebos + 1) / (cebos + totalLines)).toFixed(4);
+  // const endNocebo = Math.log((nocebos + 1) / (nocebos + totalLines)).toFixed(4);
 
   // ···················································
   const stream = fs.createWriteStream(OUTPUT_LEARNING);
