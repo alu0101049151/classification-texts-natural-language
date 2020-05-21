@@ -58,6 +58,7 @@ function fileReader(fileName) {
       copy = currentString.substr(0, commaPosition);
       finalStrings.push(copy);
     }
+    console.log(finalStrings);
     getTokens(finalStrings);
   });
 }
