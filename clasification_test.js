@@ -35,8 +35,9 @@ const CEBO = 'cebo';
 const NOCEBO = 'nocebo';
 
 const LEARN_LOG_FILE = 'aprendizajelog.txt';
-const INPUT_FILE_TEST = 'cebo_test_no_class.csv';
-const OUTPUT_FILE = 'clasificacion_alu0101049151.csv';
+const INPUT_FILE_TEST = 'cebo_train_no_tags.csv';
+const OUTPUT_FILE = 'salida.csv';
+const INPUT_TRAIN = 'cebo_train.csv';
 
 /**
  * @desc Reads the file with the vocabulary of the training file.
@@ -122,6 +123,7 @@ function testReader(words, totalLog) {
         finalHeadLines.push(currentLine);
       }
     }
+    // console.log(finalHeadLines);
     clasify(finalHeadLines);
   });
 }
@@ -134,14 +136,79 @@ function clasify(finalHeadLines) {
   const stream = fs.createWriteStream(OUTPUT_FILE);
   for (const currentLine of finalHeadLines) {
     let tag = '';
-    if (currentLine.cebo > currentLine.nocebo) {
+    if (parseFloat(currentLine.cebo) > parseFloat(currentLine.nocebo)) {
+      // console.log(currentLine.cebo + ' ' + currentLine.nocebo);
       tag = CEBO;
     } else {
       tag = NOCEBO;
     }
-    stream.write(currentLine.content + ';' + currentLine.cebo + ';' +
-    currentLine.nocebo + ';' + tag + N_LINE);
+    currentLine.tag = tag;
+    stream.write(currentLine.content + ',' + tag + N_LINE);
   }
+  fileReader(INPUT_TRAIN, finalHeadLines);
+}
+
+// ====================================================================
+
+/**
+ * @desc Reads a file from the input name given by commandline and generate an
+ * object for each line, to store the statement and the tag "cebo/nocebo" of
+ * each line.
+ * @param {String} fileName Is the file name to read data from.
+ */
+function fileReader(fileName, finalHeadLines) {
+  let copy = [];
+  // console.log(finalHeadLines);
+  fs.readFile(fileName, UTF8, (err, content) => {
+    if (err) {
+      return console.error(err);
+    }
+    const data = content.split(NEWLINE);
+    const lines = [];
+    for (const currentString of data) {
+      if (currentString !== '') {
+        const currentLine = {};
+        let currentTag = '';
+
+        const commaPosition = currentString.indexOf(COMMA);
+        copy = currentString.substr(0, commaPosition);
+        currentTag = currentString.substr(commaPosition + 1);
+
+        // Checks that currentTag is 'cebo' or 'nocebo'
+        while ((currentTag !== CEBO) && (currentTag !== NOCEBO)) {
+          const newCommaPosition = currentTag.indexOf(COMMA);
+          const auxLimit = commaPosition + newCommaPosition + 2;
+          const newCopy = currentString.substr(0, auxLimit);
+          copy = newCopy;
+          currentTag = currentString.substr(auxLimit);
+        }
+
+        currentLine.content = copy;
+        currentLine.tag = currentTag;
+        lines.push(currentLine);
+      }
+    }
+    // console.log(lines);
+    generatePercentage(lines, finalHeadLines);
+  });
+}
+
+/**
+ * 
+ * @param {*} lines 
+ */
+function generatePercentage(lines, finalHeadLines) {
+  // console.log(finalHeadLines);
+  // console.log(lines);
+  let finalPercentage = 0;
+  let aciertos = 0;
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].tag === finalHeadLines[i].tag) {
+      aciertos++;
+    }
+  }
+  finalPercentage = (aciertos / 5000) * 100;
+  console.log(finalPercentage);
 }
 
 readVocabulary();
