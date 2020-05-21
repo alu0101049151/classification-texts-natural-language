@@ -137,12 +137,17 @@ function wordsCounter(lines) {
  */
 function writeResult(words, cebos, nocebos) {
   const stream = fs.createWriteStream(OUTPUT_FILE);
+  const unk = {};
+  unk.name = '<UNK>';
+  unk.cebo = 0;
+  unk.nocebo = 0;
+  words.push(unk);
   stream.write('numtitulares: ' + cebos + ' ' + nocebos + N_LINE);
   for (const currentWord of words) {
     stream.write(currentWord.name + ' ' + currentWord.cebo + ' ' +
     currentWord.nocebo + N_LINE);
   }
-  stream.write('<UNK> 0 0');
+  // stream.write('<UNK> 0 0');
   stream.close();
 }
 
@@ -172,6 +177,7 @@ function learningLog(lines, finalWords, cebosWord, nocebosWord) {
   const totalLines = lines.length;
   const ceboTProb = Math.log((cebos / totalLines)).toFixed(4);
   const noceboTProb = Math.log((nocebos / totalLines)).toFixed(4);
+
   const endCebo = Math.log((cebos + 1) / (cebos + totalLines)).toFixed(4);
   const endNocebo = Math.log((nocebos + 1) / (nocebos + totalLines)).toFixed(4);
 
@@ -187,7 +193,5 @@ function learningLog(lines, finalWords, cebosWord, nocebosWord) {
     stream.write(currentWord.name + ' ' + ceboWProb + ' ' + noceboWProb +
       N_LINE);
   }
-  stream.write('</s> ' + endCebo + ' ' + endNocebo + N_LINE);
-  stream.write('<UNK> 0 0');
   stream.close();
 }
