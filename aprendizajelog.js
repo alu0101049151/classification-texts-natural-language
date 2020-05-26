@@ -147,7 +147,6 @@ function writeResult(words, cebos, nocebos) {
     stream.write(currentWord.name + ' ' + currentWord.cebo + ' ' +
     currentWord.nocebo + N_LINE);
   }
-  // stream.write('<UNK> 0 0');
   stream.close();
 }
 

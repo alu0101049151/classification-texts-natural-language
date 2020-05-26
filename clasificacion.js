@@ -51,8 +51,8 @@ function readVocabulary() {
     const allWords = content.split(NEWLINE);
     const firstData = allWords[0].split(TOKEN);
     const totalLog = {};
-    totalLog.cebo = firstData[1];
-    totalLog.nocebo = firstData[2];
+    totalLog.cebo = parseFloat(firstData[1]);
+    totalLog.nocebo = parseFloat(firstData[2]);
 
     let counter = 0;
     for (const currentWord of allWords) {
@@ -60,8 +60,8 @@ function readVocabulary() {
         const infoWord = currentWord.split(TOKEN);
         const word = {};
         word.content = infoWord[0];
-        word.ceboProbLog = infoWord[1];
-        word.noceboProbLog = infoWord[2];
+        word.ceboProbLog = parseFloat(infoWord[1]);
+        word.noceboProbLog = parseFloat(infoWord[2]);
         finalWords.push(word);
       }
       counter++;
@@ -104,7 +104,7 @@ function testReader(words, totalLog) {
         for (const currentToken of tokensOfString) {
           let found = false;
           let count = 0;
-          while (!found && (count < words.length)) {
+          while (!found && (count < words.length) && (currentToken !== '')) {
             if (words[count].content === currentToken) {
               found = true;
               totalCebo += parseFloat(words[count].ceboProbLog);
@@ -112,13 +112,13 @@ function testReader(words, totalLog) {
             }
             count++;
           }
-          if (!found) {
+          if (!found && (currentToken !== '')) {
             totalCebo += ceboUnk;
             totalNoCebo += noceboUnk;
           }
         }
-        currentLine.cebo = totalCebo.toFixed(2);
-        currentLine.nocebo = totalNoCebo.toFixed(2);
+        currentLine.cebo = parseFloat(totalCebo.toFixed(2));
+        currentLine.nocebo = parseFloat(totalNoCebo.toFixed(2));
         finalHeadLines.push(currentLine);
       }
     }

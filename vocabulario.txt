@@ -1,4 +1,4 @@
-Number of words: 10718
+Number of words: 10750
 A
 a
 AAA
@@ -60,6 +60,7 @@ Accident
 Accidental
 Accidentally
 accidents
+accord
 According
 according
 Accords
@@ -405,6 +406,7 @@ Annie
 anniversary
 announce
 Announced
+announced
 Announcements
 Announces
 announces
@@ -1189,6 +1191,7 @@ Bossaso
 Bosses
 Boston
 Both
+both
 Bothered
 bottle
 Bottle
@@ -1558,12 +1561,14 @@ Castillo
 Casting
 Castle
 castrating
+casualties
 Cat
 cat
 Catalonia
 Catch
 Catches
 catches
+Category
 Caterers
 Catherine
 Catholic
@@ -2085,6 +2090,7 @@ constitution
 Constitutional
 constitutional
 construction
+Consul
 consulate
 Consult
 consultant
@@ -2889,6 +2895,7 @@ Dressing
 Drew
 dric
 drifts
+drilling
 Drink
 Drinker
 Drinking
@@ -3074,6 +3081,7 @@ Elena
 Elephant
 Elevating
 Eleven
+eleven
 Elevens
 Elf
 Elgin
@@ -3162,6 +3170,7 @@ enough
 enquiry
 Enraged
 Enraging
+enrolls
 Ensign
 ensure
 enter
@@ -4064,6 +4073,7 @@ grabs
 Grabs
 Grace
 Grad
+grade
 Grade
 Grader
 Graduate
@@ -4705,11 +4715,13 @@ increases
 increasing
 Incredible
 Incredibly
+indecency
 indefinite
 independence
 independent
 index
 Index
+Indexes
 India
 Indian
 Indiana
@@ -4843,6 +4855,7 @@ Invented
 invested
 investigate
 Investigated
+investigated
 Investigates
 investigating
 Investigation
@@ -5967,6 +5980,7 @@ Midterms
 Midwest
 Midwestern
 Might
+Mighty
 Migraine
 Migrant
 migrants
@@ -6247,6 +6261,7 @@ Mysterious
 N
 n
 Nacional
+Nadal
 Nadals
 Nadine
 Nae
@@ -6538,6 +6553,7 @@ Officially
 officially
 Officials
 officials
+offshore
 Offshore
 Oficials
 Often
@@ -6760,6 +6776,7 @@ Pancakes
 pancreatic
 Panda
 Pandas
+pandemic
 Panel
 panel
 panic
@@ -6979,7 +6996,9 @@ photo
 Photobomb
 Photobombed
 Photographed
+photographer
 Photographic
+photojournalists
 Photos
 photos
 Photoshoots
@@ -7279,12 +7298,14 @@ President
 president
 Presidential
 presidential
+presidents
 Press
 press
 Presses
 Pressure
 pressure
 pressured
+presumed
 Pretend
 Pretenders
 Pretending
@@ -7542,6 +7563,7 @@ race
 Races
 Rachel
 Racial
+racial
 Racing
 racism
 Racism
@@ -8047,6 +8069,7 @@ rises
 Rises
 Rishikesh
 Rising
+risk
 risks
 rival
 Rival
@@ -8545,6 +8568,7 @@ shareholders
 Shareholders
 Shares
 Sharing
+sharing
 shark
 Sharks
 Sharon
@@ -8621,8 +8645,8 @@ Shortest
 Shorts
 Shot
 shot
-shots
 Shots
+shots
 Should
 Shouldn
 Shout
@@ -8824,6 +8848,7 @@ Soccer
 Social
 social
 Society
+Soderling
 Soft
 software
 Software
@@ -9153,6 +9178,7 @@ Strong
 Strongest
 Strongholds
 struck
+Struck
 Struggle
 Struggles
 Struggling
@@ -9502,6 +9528,7 @@ Terror
 terrorism
 terrorist
 terrorists
+Terry
 Test
 test
 Tested
@@ -9512,6 +9539,7 @@ Testing
 testing
 tests
 Tests
+Texan
 Texas
 Text
 text
@@ -9554,6 +9582,7 @@ then
 Therapist
 Therapy
 There
+there
 Theroux
 These
 They
@@ -9920,6 +9949,7 @@ Tweeting
 Tweets
 Twenties
 Twentieth
+twentieth
 twenty
 Twentysomethings
 Twerk
@@ -10204,6 +10234,7 @@ viewers
 Views
 Vigils
 Viktor
+village
 Villagers
 Villain
 Villains
@@ -10348,6 +10379,7 @@ Ways
 Waziristan
 We
 Weak
+weakens
 Wealth
 Weapons
 weapons

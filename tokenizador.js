@@ -34,6 +34,8 @@ const NEWLINE = /\r\n|\r|\n/;
 const REPLACE = /\W/g;
 const NUMBER_OR_SPACE = /^(.*)?\d+(.*)?$|^\s*$/;
 
+const CEBO = 'cebo';
+const NOCEBO = 'nocebo';
 const UTF8 = 'utf8';
 const SPACE = ' ';
 const N_LINE = '\n';
@@ -42,21 +44,41 @@ const OUTPUT_FILE = 'vocabulario.txt';
 const INPUT_FILE = 'cebo_train.csv';
 
 /**
- * @desc Reads a file from the input name given by commandline.
- * @param {String} fileName Is the file name read from the command line.
+ * @desc Reads a file from the input name given by commandline and generate an
+ * object for each line, to store the statement and the tag "cebo/nocebo" of
+ * each line.
+ * @param {String} fileName Is the file name to read data from.
  */
 function fileReader(fileName) {
   let copy = [];
-  const finalStrings = [];
   fs.readFile(fileName, UTF8, (err, content) => {
     if (err) {
       return console.error(err);
     }
     const data = content.split(NEWLINE);
+    const finalStrings = [];
     for (const currentString of data) {
-      const commaPosition = currentString.indexOf(COMMA);
-      copy = currentString.substr(0, commaPosition);
-      finalStrings.push(copy);
+      if (currentString !== '') {
+        const currentLine = {};
+        let currentTag = '';
+
+        const commaPosition = currentString.indexOf(COMMA);
+        copy = currentString.substr(0, commaPosition);
+        currentTag = currentString.substr(commaPosition + 1);
+
+        // Checks that currentTag is 'cebo' or 'nocebo'
+        while ((currentTag !== CEBO) && (currentTag !== NOCEBO)) {
+          const newCommaPosition = currentTag.indexOf(COMMA);
+          const auxLimit = commaPosition + newCommaPosition + 2;
+          const newCopy = currentString.substr(0, auxLimit);
+          copy = newCopy;
+          currentTag = currentString.substr(auxLimit);
+        }
+
+        currentLine.content = copy;
+        // currentLine.tag = currentTag;
+        finalStrings.push(currentLine);
+      }
     }
     console.log(finalStrings);
     getTokens(finalStrings);
@@ -72,7 +94,7 @@ function getTokens(array) {
   let spaceString = '';
   let tokensArray = [];
   for (const currentString of array) {
-    spaceString = currentString.replace(REPLACE, SPACE);
+    spaceString = currentString.content.replace(REPLACE, SPACE);
     const auxArray = spaceString.split(SPACE);
     tokensArray = tokensArray.concat(auxArray);
   }

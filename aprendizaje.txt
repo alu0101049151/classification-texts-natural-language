@@ -1,4 +1,4 @@
-numtitulares: 26779 22488
+numtitulares: 24233 20067
 A 414 53
 a 1 169
 AAA 0 2
@@ -60,6 +60,7 @@ Accident 0 3
 Accidental 1 1
 Accidentally 4 0
 accidents 0 2
+accord 0 1
 According 8 0
 according 0 3
 Accords 0 1
@@ -405,6 +406,7 @@ Annie 1 0
 anniversary 0 6
 announce 0 1
 Announced 0 1
+announced 0 1
 Announcements 1 0
 Announces 1 1
 announces 0 15
@@ -1189,6 +1191,7 @@ Bossaso 0 1
 Bosses 1 0
 Boston 1 5
 Both 0 1
+both 0 1
 Bothered 2 0
 bottle 0 1
 Bottle 1 0
@@ -1558,12 +1561,14 @@ Castillo 0 1
 Casting 1 1
 Castle 2 0
 castrating 0 1
+casualties 0 1
 Cat 16 0
 cat 0 1
 Catalonia 0 1
 Catch 2 2
 Catches 0 1
 catches 0 1
+Category 0 1
 Caterers 1 0
 Catherine 1 0
 Catholic 0 2
@@ -2085,6 +2090,7 @@ constitution 0 2
 Constitutional 0 1
 constitutional 0 1
 construction 0 1
+Consul 0 1
 consulate 0 1
 Consult 0 1
 consultant 0 1
@@ -2889,6 +2895,7 @@ Dressing 2 0
 Drew 2 0
 dric 0 1
 drifts 0 1
+drilling 0 1
 Drink 9 1
 Drinker 1 0
 Drinking 5 0
@@ -3074,6 +3081,7 @@ Elena 0 1
 Elephant 2 0
 Elevating 0 1
 Eleven 1 1
+eleven 0 2
 Elevens 0 1
 Elf 3 0
 Elgin 0 2
@@ -3162,6 +3170,7 @@ enough 0 2
 enquiry 0 1
 Enraged 1 0
 Enraging 1 0
+enrolls 0 1
 Ensign 0 1
 ensure 0 1
 enter 0 3
@@ -4064,6 +4073,7 @@ grabs 0 1
 Grabs 0 1
 Grace 0 1
 Grad 1 0
+grade 0 1
 Grade 2 0
 Grader 0 1
 Graduate 1 0
@@ -4705,11 +4715,13 @@ increases 0 4
 increasing 0 1
 Incredible 7 0
 Incredibly 9 0
+indecency 0 1
 indefinite 0 1
 independence 0 1
 independent 0 2
 index 0 1
 Index 0 2
+Indexes 0 1
 India 12 22
 Indian 12 9
 Indiana 0 3
@@ -4843,6 +4855,7 @@ Invented 2 0
 invested 0 1
 investigate 0 2
 Investigated 1 0
+investigated 0 1
 Investigates 0 1
 investigating 0 1
 Investigation 1 2
@@ -5967,6 +5980,7 @@ Midterms 1 0
 Midwest 0 1
 Midwestern 0 1
 Might 11 1
+Mighty 0 1
 Migraine 1 0
 Migrant 0 1
 migrants 0 1
@@ -6247,6 +6261,7 @@ Mysterious 1 1
 N 1 11
 n 0 2
 Nacional 0 1
+Nadal 0 1
 Nadals 1 0
 Nadine 0 1
 Nae 4 0
@@ -6538,6 +6553,7 @@ Officially 3 0
 officially 0 1
 Officials 0 11
 officials 0 1
+offshore 0 1
 Offshore 0 2
 Oficials 0 1
 Often 2 1
@@ -6760,6 +6776,7 @@ Pancakes 1 0
 pancreatic 0 1
 Panda 1 0
 Pandas 2 0
+pandemic 0 1
 Panel 0 1
 panel 0 2
 panic 0 2
@@ -6979,7 +6996,9 @@ photo 0 2
 Photobomb 1 0
 Photobombed 1 0
 Photographed 1 0
+photographer 0 1
 Photographic 1 0
+photojournalists 0 1
 Photos 46 3
 photos 0 2
 Photoshoots 1 0
@@ -7279,12 +7298,14 @@ President 0 33
 president 0 21
 Presidential 4 3
 presidential 0 3
+presidents 0 1
 Press 1 2
 press 0 3
 Presses 0 2
 Pressure 0 1
 pressure 0 3
 pressured 0 1
+presumed 0 1
 Pretend 1 0
 Pretenders 0 1
 Pretending 1 0
@@ -7542,6 +7563,7 @@ race 0 4
 Races 0 1
 Rachel 2 1
 Racial 0 1
+racial 0 1
 Racing 0 2
 racism 0 2
 Racism 0 1
@@ -8047,6 +8069,7 @@ rises 0 4
 Rises 0 6
 Rishikesh 1 0
 Rising 0 3
+risk 0 1
 risks 0 1
 rival 0 1
 Rival 0 3
@@ -8545,6 +8568,7 @@ shareholders 0 1
 Shareholders 0 2
 Shares 1 3
 Sharing 3 0
+sharing 0 1
 shark 0 2
 Sharks 1 0
 Sharon 0 1
@@ -8621,8 +8645,8 @@ Shortest 1 0
 Shorts 2 0
 Shot 4 4
 shot 0 10
-shots 0 1
 Shots 0 2
+shots 0 1
 Should 90 0
 Shouldn 4 0
 Shout 2 0
@@ -8824,6 +8848,7 @@ Soccer 0 5
 Social 4 4
 social 0 4
 Society 0 2
+Soderling 0 1
 Soft 0 1
 software 0 1
 Software 0 1
@@ -9153,6 +9178,7 @@ Strong 0 5
 Strongest 0 1
 Strongholds 0 1
 struck 0 2
+Struck 0 1
 Struggle 3 1
 Struggles 22 4
 Struggling 0 1
@@ -9502,6 +9528,7 @@ Terror 0 5
 terrorism 0 5
 terrorist 0 2
 terrorists 0 1
+Terry 0 1
 Test 16 3
 test 0 2
 Tested 2 0
@@ -9512,6 +9539,7 @@ Testing 0 1
 testing 0 2
 tests 0 1
 Tests 0 3
+Texan 0 1
 Texas 3 11
 Text 6 0
 text 0 2
@@ -9554,6 +9582,7 @@ then 0 1
 Therapist 1 0
 Therapy 3 0
 There 16 2
+there 0 1
 Theroux 1 0
 These 108 0
 They 34 1
@@ -9920,6 +9949,7 @@ Tweeting 1 0
 Tweets 44 0
 Twenties 3 0
 Twentieth 0 1
+twentieth 0 1
 twenty 0 4
 Twentysomethings 5 0
 Twerk 1 0
@@ -10204,6 +10234,7 @@ viewers 0 1
 Views 0 1
 Vigils 1 0
 Viktor 0 2
+village 0 1
 Villagers 0 1
 Villain 4 0
 Villains 1 0
@@ -10348,6 +10379,7 @@ Ways 40 1
 Waziristan 0 1
 We 136 0
 Weak 0 1
+weakens 0 1
 Wealth 0 1
 Weapons 0 4
 weapons 0 4
@@ -10717,5 +10749,4 @@ zoologists 0 1
 Zoomed 1 0
 Zotob 0 1
 Zuma 0 2
- 51950 41586
 <UNK> 0 0
